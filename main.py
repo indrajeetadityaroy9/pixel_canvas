@@ -1,7 +1,7 @@
 try:
     import pygame
 except:
-    import install_requirements
+
     import pygame
 from tkinter import *
 from tkinter import messagebox
@@ -90,7 +90,7 @@ def openFile(path):
             v = False
         else:
             v = True
-        initalize(columns, rows, v)  # Redraw the grid, tool bars, menu bars etc. 
+        initalize(columns, rows, v)  # Redraw the grid, tool bars, menu bars etc.
         name = path.split("/")
         changeCaption(name[-1])
 
@@ -128,7 +128,7 @@ def showFileNav(op=False):
         filename = asksaveasfilename(title="Save File",
                                      filetypes=myFormats)  # Ask the user choose a path to save their file to
 
-    if filename:  # If the user seletced something 
+    if filename:  # If the user seletced something
         x = filename[:]  # Make a copy
         return x
 
@@ -310,7 +310,7 @@ while run:
                         clicked.show(grid.screen, (255, 0, 0), 1, True)
 
                         # Depending what tool they click
-                        if clicked.text == 'D':  # Draw tool  
+                        if clicked.text == 'D':  # Draw tool
                             color = (0, 0, 0)
                         elif clicked.text == 'E':  # Erase tool
                             color = (255, 255, 255)
@@ -351,7 +351,7 @@ while run:
 
                         thickness = int(clicked.text)  # set line thickness
 
-                    # If they click on the save menu 
+                    # If they click on the save menu
                     elif pos[0] >= saveMenu.startx and pos[0] <= saveMenu.startx + saveMenu.width and pos[
                         1] >= saveMenu.starty and pos[1] <= saveMenu.starty + saveMenu.height:
                         clicked = saveMenu.clicked(pos)
